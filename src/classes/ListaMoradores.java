@@ -77,10 +77,23 @@ public class ListaMoradores {
   public QuantidadeMoradores buscarMorador(int id) {
     for (int i = 0; i < contador; i++) {
       if (moradoresNaLista[i].getId() == id) {
-        return moradoresNaLista[i]; // mostra o morador que foi localizado
+        System.out.println("O morador (" + moradoresNaLista[i] + ") foi localizado.");
+        return moradoresNaLista[i];
       }
+
     }
+    System.out.println("O morador com ID " + id + " não foi localizado.");
     return null;
   }
 
+  // listar
+  public void listarMoradores() {
+    if (contador == 0) {
+      System.out.println("Nenhum morador na lista.");
+    } else {
+      for (int i = 0; i < contador; i++) {
+        System.out.println(moradoresNaLista[i]); // Isso chama o método toString() de QuantidadeMoradores
+      }
+    }
+  }
 }

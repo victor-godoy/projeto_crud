@@ -55,4 +55,12 @@ public class QuantidadeMoradores {
   public void setNumeroPredio(int numeroPredio) {
     this.numeroPredio = numeroPredio;
   }
+
+  // quero que apareca a informacao assim
+  // Sobrescrevendo o método toString
+  @Override
+  public String toString() {
+    return "ID: " + id + ", Nome: " + nome + ", Idade: " + idade +
+        ", Prédio: " + predio + ", Número do Prédio: " + numeroPredio;
+  }
 }
