@@ -62,6 +62,8 @@ public class ListaMoradores {
   // Atualizar
   public boolean atualizar(int id, String nomeNovo, int idadeNova, String predioNovo, int numeroPredioNovo) {
     for (int i = 0; i < contador; i++) {
+      // para atualizar primeiro eu vejo se o id é igual ao do elemento 
+      // ai seleciono o atributo e passo o valor que sera 
       if (moradoresNaLista[i].getId() == id) {
         moradoresNaLista[i].setNome(nomeNovo);
         moradoresNaLista[i].setIdade(idadeNova);
@@ -77,6 +79,7 @@ public class ListaMoradores {
   public QuantidadeMoradores buscarMorador(int id) {
     for (int i = 0; i < contador; i++) {
       if (moradoresNaLista[i].getId() == id) {
+        // basicamente vai passar pela array e verificar se o id sao iguais ai localizou 
         System.out.println("O morador (" + moradoresNaLista[i] + ") foi localizado.");
         return moradoresNaLista[i];
       }
